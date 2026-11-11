@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Baldi's Fun New School Plus Ultimate Edition</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -54,12 +54,12 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = ".";
+      var buildUrl = "Build";
       var loaderUrl = buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.loader.js";
       var dataPartUrls = Array.from({ length: 15 }, (_, index) =>
-        buildUrl + "/data-" + String(index).padStart(2, "0") + ".bin"
+        buildUrl + "/runtime/data-" + String(index).padStart(2, "0") + ".bin"
       );
-      var wasmPartUrls = [buildUrl + "/game-wasm.bin"];
+      var wasmPartUrls = [buildUrl + "/runtime/game-wasm.bin"];
       var config = {
         dataUrl: "",
         frameworkUrl: buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.framework.js",
